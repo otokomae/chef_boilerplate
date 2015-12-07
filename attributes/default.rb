@@ -39,7 +39,6 @@ default[:boilerplate][:recipes] =
   end
 
 default[:boilerplate][:install_packages] = %w(
-  ant apache2-mpm-prefork aspell axel
   ccache curl
   debian-el
   emacs-goodies-el expect exuberant-ctags
