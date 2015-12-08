@@ -1,7 +1,7 @@
 default[:boilerplate] = {
   repo: {
     type: 'git',
-    uri: 'https://github.com/topaz2/chef_boilerplate.git'
+    uri: 'https://github.com/NetCommons3/chef_boilerplate.git'
   },
   apt_fast: true,
   apt_packages: true,
