@@ -28,13 +28,13 @@ execute 'install gem packages' do
   only_if { ::File.exist?("#{node[:boilerplate][:app_root]}/Gemfile") }
 end
 
-%w( jslint closure_compiler ).each do |package|
-  execute "juicer install #{package}" do
-    command "juicer install #{package}"
-    only_if { ::File.exist?("#{node[:boilerplate][:app_root]}/Gemfile") }
-    not_if { ::File.exist?("#{ENV['HOME']}/.juicer/lib/#{package}") }
-  end
-end
+# %w( jslint closure_compiler ).each do |package|
+#   execute "juicer install #{package}" do
+#     command "juicer install #{package}"
+#     only_if { ::File.exist?("#{node[:boilerplate][:app_root]}/Gemfile") }
+#     not_if { ::File.exist?("#{ENV['HOME']}/.juicer/lib/#{package}") }
+#   end
+# end
 
 %w( knife-solo ).each do |package|
   chef_gem package
